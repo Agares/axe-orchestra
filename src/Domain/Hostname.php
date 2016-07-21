@@ -2,7 +2,7 @@
 
 namespace Agares\AxeOrchestra\Domain;
 
-class Hostname
+final class Hostname
 {
 	const LABEL_REGEXP = '/^[a-z0-9][0-9a-z\\-]*$/i';
 	const LABEL_SEPARATOR = '.';
