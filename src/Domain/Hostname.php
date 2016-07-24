@@ -9,7 +9,7 @@ final class Hostname
 	const LABEL_REGEXP = '/^[a-z0-9][0-9a-z\\-]*$/i';
 	const LABEL_SEPARATOR = '.';
 
-	public static function fromString(string $name)
+	public static function fromString(string $name) : self
 	{
 		static::validate($name);
 
