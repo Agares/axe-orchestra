@@ -20,9 +20,8 @@ final class Memory
 
 	private static function validate(int $megabytes)
 	{
-		if($megabytes <= 0) {
+		if($megabytes <= 0)
 			throw InvalidMemoryAmountException::amount($megabytes);
-		}
 	}
 
 	public function megabytes() : int {

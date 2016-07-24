@@ -21,8 +21,7 @@ final class Hostname
 			static::validateLabel($label);
 	}
 
-	private static function validateLabel(string $label)
-	{
+	private static function validateLabel(string $label) {
 		if(!preg_match(self::LABEL_REGEXP, $label))
 			throw InvalidHostnameException::label($label);
 	}
