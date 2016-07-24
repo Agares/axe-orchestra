@@ -25,7 +25,7 @@ class MacAddressTest extends \PHPUnit_Framework_TestCase
 
 	/**
 	 * @dataProvider invalidMacAddressProvider
-	 * @expectedException \Agares\AxeOrchestra\Domain\InvalidMacAddressException
+	 * @expectedException \Agares\AxeOrchestra\Domain\Exceptions\InvalidMacAddressException
 	 */
 	public function testCannotCreateInvalidAddress($value) {
 		MacAddress::fromString($value);

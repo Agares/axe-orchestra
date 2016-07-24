@@ -13,14 +13,14 @@ class MemoryTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @expectedException \Agares\AxeOrchestra\Domain\InvalidMemoryAmountException
+	 * @expectedException \Agares\AxeOrchestra\Domain\Exceptions\InvalidMemoryAmountException
 	 */
 	public function testCannotBeCreatedFromZeroMegabytes() {
 		Memory::fromMegaBytes(0);
 	}
 
 	/**
-	 * @expectedException \Agares\AxeOrchestra\Domain\InvalidMemoryAmountException
+	 * @expectedException \Agares\AxeOrchestra\Domain\Exceptions\InvalidMemoryAmountException
 	 */
 	public function testCannotBeCreatedFromNegativeMegabytes() {
 		Memory::fromMegaBytes(-1024);

@@ -2,6 +2,8 @@
 
 namespace Agares\AxeOrchestra\Domain;
 
+use Agares\AxeOrchestra\Domain\Exceptions\InvalidMacAddressException;
+
 final class MacAddress
 {
 	const MAC_ADDRESS_REGEXP = '/([a-f0-9]{2}:){5}[a-f0-9]{2}/i';

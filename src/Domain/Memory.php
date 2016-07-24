@@ -1,6 +1,8 @@
 <?php
 namespace Agares\AxeOrchestra\Domain;
 
+use Agares\AxeOrchestra\Domain\Exceptions\InvalidMemoryAmountException;
+
 final class Memory
 {
 	/**

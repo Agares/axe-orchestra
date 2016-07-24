@@ -2,6 +2,8 @@
 
 namespace Agares\AxeOrchestra\Domain;
 
+use Agares\AxeOrchestra\Domain\Exceptions\InvalidHostnameException;
+
 final class Hostname
 {
 	const LABEL_REGEXP = '/^[a-z0-9][0-9a-z\\-]*$/i';

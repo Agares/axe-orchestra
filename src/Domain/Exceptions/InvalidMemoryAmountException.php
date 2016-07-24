@@ -1,5 +1,5 @@
 <?php
-namespace Agares\AxeOrchestra\Domain;
+namespace Agares\AxeOrchestra\Domain\Exceptions;
 
 final class InvalidMemoryAmountException extends \Exception
 {

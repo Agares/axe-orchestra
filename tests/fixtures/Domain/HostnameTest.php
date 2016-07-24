@@ -28,7 +28,7 @@ class HostnameTest extends \PHPUnit_Framework_TestCase
 
 	/**
 	 * @dataProvider invalidHostnameProvider
-	 * @expectedException \Agares\AxeOrchestra\Domain\InvalidHostnameException
+	 * @expectedException \Agares\AxeOrchestra\Domain\Exceptions\InvalidHostnameException
 	 */
 	public function testCannotCreateInvalidHostname($name) {
 		Hostname::fromString($name);

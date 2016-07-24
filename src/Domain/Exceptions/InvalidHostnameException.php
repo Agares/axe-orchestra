@@ -1,6 +1,6 @@
 <?php
 
-namespace Agares\AxeOrchestra\Domain;
+namespace Agares\AxeOrchestra\Domain\Exceptions;
 
 final class InvalidHostnameException extends \Exception
 {
