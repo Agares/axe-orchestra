@@ -2,6 +2,8 @@
 
 namespace Agares\AxeOrchestra\Domain;
 
+use Agares\AxeOrchestra\Infrastructure\UUID;
+
 final class CdRom implements VirtualDiskInterface
 {
 	/**
@@ -12,15 +14,24 @@ final class CdRom implements VirtualDiskInterface
 	/**
 	 * @var string
 	 */
-	private $physicalDevicePath;
+	private $physicalFilePath;
 
-	public function __construct(string $virtualDeviceName, string $physicalDevicePath) {
+	/**
+	 * @var UUID
+	 */
+	private $id;
+
+	public function __construct(UUID $id, string $virtualDeviceName, string $physicalFilePath) {
+		$this->id = $id;
 		$this->virtualDeviceName = $virtualDeviceName;
-		$this->physicalDevicePath = $physicalDevicePath;
+		$this->physicalFilePath = $physicalFilePath;
+	}
+	public function id() : UUID {
+		return $this->id;
 	}
 
 	public function virtualDeviceName() : string {
-		return $this->physicalDevicePath;
+		return $this->virtualDeviceName;
 	}
 
 	public function writable() : bool {

@@ -4,9 +4,7 @@ namespace Agares\AxeOrchestra\Domain;
 
 use Agares\AxeOrchestra\Infrastructure\UUID;
 
-interface VirtualDiskInterface
+interface TemplateInterface
 {
 	public function id() : UUID;
-	public function virtualDeviceName() : string;
-	public function writable() : bool;
 }
